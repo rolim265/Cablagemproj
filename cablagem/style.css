@@ -259,10 +259,11 @@ SERVIÇOS
 
 .servicos-content {
     display: flex;
-    gap: 60px;
+    gap: 30%;
     align-items: center;
     margin-bottom: 80px;
     padding: 40px;
+    padding-left: 5%;
     border-radius: 15px;
     background: #fafafa;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
@@ -643,4 +644,5 @@ height:40px;
 
 
 }
+
 
