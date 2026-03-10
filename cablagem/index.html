@@ -61,20 +61,26 @@
     <!-- BANNER CARROSSEL -->
     <section class="banner">
 
-        <!-- DESKTOP -->
         <div class="carousel desktop-carousel">
             <img src="img_carrocel/img4.png" class="slide active">
             <img src="img_carrocel/img2.png" class="slide">
             <img src="img_carrocel/img3.png" class="slide">
         </div>
 
-        <!-- MOBILE -->
         <div class="carousel mobile-carousel">
             <img src="img_carrocel/img2mobile.png" class="slide active">
             <img src="img_carrocel/img3mobile.png" class="slide">
             <img src="img_carrocel/img4mobile.png" class="slide">
             <img src="img_carrocel/img1mobile.png" class="slide">
         </div>
+
+        <button class="carousel-btn prev">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <button class="carousel-btn next">
+            <i class="bi bi-chevron-right"></i>
+        </button>
 
     </section>
 
@@ -254,12 +260,12 @@
 
                     <div class="cliente">
                         <img src="img_clientes/Cliente2.png" alt="Colégio Albert Sabin">
-                        <span>Colégio Albert Sabin</span>
+                        <span>Colégio Albert<br> Sabin</span>
                     </div>
 
                     <div class="cliente">
                         <img src="img_clientes/Cliente3.png" alt="Universidade Anhembi Morumbi">
-                        <span>Universidade Anhembi Morumbi</span>
+                        <span>Universidade Anhembi<br> Morumbi</span>
                     </div>
 
                     <div class="cliente">
@@ -274,51 +280,13 @@
 
                     <div class="cliente">
                         <img src="img_clientes/Cliente6.png" alt="Escinter ">
-                        <span>Communit Creators Academy </span>
+                        <span>Communit Creators<br> Academy </span>
                     </div>
 
                     <div class="cliente">
                         <img src="img_clientes/Cliente7.png" alt="Escinter ">
                         <span>Sincron Tecnologias </span>
                     </div>
-
-
-                    <!-- LOOP INFINITO -->
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente1.png" alt="São Judas">
-                        <span>São Judas</span>
-                    </div>
-
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente2.png" alt="Colégio Albert Sabin">
-                        <span>Colégio Albert Sabin</span>
-                    </div>
-
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente3.png" alt="Universidade Anhembi Morumbi">
-                        <span>Universidade Anhembi Morumbi</span>
-                    </div>
-
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente4.png" alt="Shunaider">
-                        <span>Shunaider</span>
-                    </div>
-
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente5.png" alt="Escinter ">
-                        <span>Escinter </span>
-                    </div>
-
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente6.png" alt="Escinter ">
-                        <span>Communit Creators Academy </span>
-                    </div>
-
-                    <div class="cliente">
-                        <img src="img_clientes/Cliente7.png" alt="Escinter ">
-                        <span>Sincron Tecnologias </span>
-                    </div>
-
 
                 </div>
             </div>
@@ -410,6 +378,31 @@
 
     </script>
     <script>
+        const track = document.querySelector(".carousel-track");
+
+        let speed = window.innerWidth < 768 ? 1.2 : 0.5;
+
+        track.innerHTML += track.innerHTML;
+
+        let position = 0;
+
+        function animateClientes() {
+
+            position -= speed;
+
+            if (Math.abs(position) >= track.scrollWidth / 2) {
+                position = 0;
+            }
+
+            track.style.transform = `translateX(${position}px)`;
+
+            requestAnimationFrame(animateClientes);
+
+        }
+
+        animateClientes();
+    </script>
+    <script>
         document.getElementById("formOrcamento").addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -436,19 +429,33 @@ Necessidade: ${mensagem}`;
     </script>
     <script>
         const carousels = document.querySelectorAll(".carousel");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
 
         carousels.forEach(carousel => {
 
             const slides = carousel.querySelectorAll(".slide");
             let current = 0;
 
-            function changeSlide() {
-                slides[current].classList.remove("active");
-                current = (current + 1) % slides.length;
-                slides[current].classList.add("active");
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove("active"));
+                slides[index].classList.add("active");
             }
 
-            setInterval(changeSlide, 10000);
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+
+            function prevSlide() {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            }
+
+            nextBtn.addEventListener("click", nextSlide);
+            prevBtn.addEventListener("click", prevSlide);
+
+            setInterval(nextSlide, 10000);
 
         });
     </script>
