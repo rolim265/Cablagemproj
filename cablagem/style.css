@@ -555,7 +555,10 @@ height:40px;
         display: flex;
     }
 
-
+    footer {
+    margin-top: 20px;
+        
+    }
 
     nav {
         position: absolute;
@@ -636,5 +639,6 @@ height:40px;
     .cliente img {
         height: 50px;
     }
+
 
 }
