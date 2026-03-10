@@ -15,39 +15,71 @@
     <!-- HEADER -->
     <header>
         <div class="container header-content">
+
             <div class="logo">
                 <img src="img_carrocel/logo.png" alt="Logo">
             </div>
 
             <nav>
                 <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Serviços ▾</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#eng-el">Engenharia Elétrica</a></li>
+                            <li><a href="#cftv">CFTV e Segurança</a></li>
+                            <li><a href="#automacao">Automação</a></li>
+                            <li><a href="#incendio">Detecção de Incêndio</a></li>
+                            <li><a href="#infra-ti">Infraestrutura de TI</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
-             <div class="footer-social">
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="https://wa.me/5511944591328" target="_blank">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </div>
+
+            <div class="footer-social">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/cablagembr/"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/5511944591328" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </div>
+
+            <!-- MENU BURGER -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
         </div>
     </header>
-
     <!-- BANNER CARROSSEL -->
     <section class="banner">
-        <div class="carousel">
-            <img src="img_carrocel/img1.png" class="slide active">
+
+        <!-- DESKTOP -->
+        <div class="carousel desktop-carousel">
+            <img src="img_carrocel/img1.jpg" class="slide active">
             <img src="img_carrocel/img2.png" class="slide">
             <img src="img_carrocel/img3.png" class="slide">
             <img src="img_carrocel/img4.png" class="slide">
         </div>
+
+        <!-- MOBILE -->
+        <div class="carousel mobile-carousel">
+            <img src="img_carrocel/img2mobile.png" class="slide active">
+            <img src="img_carrocel/img3mobile.png" class="slide">
+            <img src="img_carrocel/mobile3.jpg" class="slide">
+            <img src="img_carrocel/mobile4.jpg" class="slide">
+        </div>
+
     </section>
 
     <!-- SOBRE NÓS -->
-    <section class="sobre">
+    <section class="sobre" id="sobre">
         <div class="container sobre-content">
             <div class="sobre-img">
                 <img src="img/brunopng1.png" alt="Eletricista">
@@ -74,31 +106,41 @@
         <div class="container areas-grid">
 
             <div class="area">
-                <div class="icon">⚡</div>
+                <div class="icon">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
                 <h3>Engenharia Elétrica</h3>
                 <p>Instalações elétricas industriais e comerciais com segurança e eficiência.</p>
             </div>
 
             <div class="area">
-                <div class="icon">⚙</div>
+                <div class="icon">
+                    <i class="bi bi-gear"></i>
+                </div>
                 <h3>Automação</h3>
                 <p>Desenvolvimento de sistemas automatizados com precisão e controle.</p>
             </div>
 
             <div class="area">
-                <div class="icon">🌐</div>
+                <div class="icon">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
                 <h3>Telemática</h3>
                 <p>Infraestrutura de redes, conectividade e comunicação.</p>
             </div>
 
             <div class="area">
-                <div class="icon">📷</div>
+                <div class="icon">
+                    <i class="bi bi-camera-video"></i>
+                </div>
                 <h3>Sistemas de Segurança</h3>
                 <p>Instalação de CFTV e monitoramento inteligente.</p>
             </div>
 
             <div class="area">
-                <div class="icon">🔥</div>
+                <div class="icon">
+                    <i class="bi bi-fire"></i>
+                </div>
                 <h3>Detecção de Incêndio</h3>
                 <p>Sistemas modernos para proteção e prevenção.</p>
             </div>
@@ -107,25 +149,94 @@
     </section>
 
     <!-- SERVIÇOS -->
-    <section class="servicos">
+    <section class="servicos" id="servicos">
+
         <div class="container">
             <h2 class="titulo-servicos">NOSSOS SERVIÇOS</h2>
 
-            <div class="servicos-content">
+            <!-- SERVIÇO 1 -->
+            <div class="servicos-content" id="eng-el">
                 <div class="servico-img">
-                    <img src="img/img1.png" alt="Serviços">
+                    <img src="img/img1.png" alt="Engenharia Elétrica">
                 </div>
 
                 <div class="servico-texto">
                     <h3>ENGENHARIA ELÉTRICA</h3>
                     <ul>
-                        <li>Projetos</li>
+                        <li>Projetos elétricos</li>
                         <li>Infraestrutura</li>
                         <li>Cablagem</li>
                         <li>Manutenções</li>
+                        <li>Quadros de energia</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- SERVIÇO 2 -->
+            <div class="servicos-content" id="cftv">
+                <div class="servico-texto">
+                    <h3>CFTV E SEGURANÇA ELETRÔNICA</h3>
+                    <ul>
+                        <li>Instalação de câmeras</li>
+                        <li>Sistemas de monitoramento</li>
+                        <li>Gravadores DVR/NVR</li>
+                        <li>Controle de acesso</li>
+                    </ul>
+                </div>
+                <div class="servico-img">
+                    <img src="img/img2.jpg" alt="CFTV">
+                </div>
+            </div>
+
+            <!-- SERVIÇO 3 -->
+            <div class="servicos-content" id="automacao">
+                <div class="servico-img">
+                    <img src="img/img3.jpg" alt="Automação">
+                </div>
+
+                <div class="servico-texto">
+                    <h3>AUTOMAÇÃO</h3>
+                    <ul>
+                        <li>Automação predial</li>
+                        <li>Controle inteligente de iluminação</li>
+                        <li>Sistemas integrados</li>
+                        <li>Programação e configuração</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SERVIÇO 4 -->
+            <div class="servicos-content" id="incendio">
+                <div class="servico-texto">
+                    <h3>DETECÇÃO E ALARME DE INCÊNDIO</h3>
+                    <ul>
+                        <li>Instalação de detectores</li>
+                        <li>Sistemas de alarme</li>
+                        <li>Centrais de incêndio</li>
+                        <li>Manutenção preventiva</li>
+                    </ul>
+                </div>
+                <div class="servico-img">
+                    <img src="img/img4.jpg" alt="Incêndio">
+                </div>
+            </div>
+
+            <!-- SERVIÇO 5 -->
+            <div class="servicos-content" id="infra-ti">
+                <div class="servico-img">
+                    <img src="img/img5.jpg" alt="Gabinetes">
+                </div>
+                <div class="servico-texto">
+                    <h3>GABINETES E INFRAESTRUTURA DE TI</h3>
+                    <ul>
+                        <li>Instalação de racks e gabinetes</li>
+                        <li>Organização de cabeamento</li>
+                        <li>Infraestrutura para servidores</li>
+                        <li>Montagem de patch panels</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -193,7 +304,7 @@
         </div>
     </section>
 
-    <section class="orcamento">
+    <section class="orcamento" id="contato">
         <div class="container orcamento-content">
 
             <div class="orcamento-texto">
@@ -226,6 +337,7 @@
                 <img src="img_carrocel/logo.png" alt="Logo">
                 <p>Energia, Tecnologia e Segurança</p>
             </div>
+            <br>
 
             <div class="footer-info">
                 <p>📍
@@ -248,7 +360,7 @@
 
             <div class="footer-social">
                 <a href="#"><i class="bi bi-linkedin"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.instagram.com/cablagembr/"><i class="bi bi-instagram"></i></a>
                 <a href="https://wa.me/5511944591328" target="_blank">
                     <i class="bi bi-whatsapp"></i>
                 </a>
@@ -257,6 +369,16 @@
         </div>
     </footer>
 
+    <script>
+
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+    </script>
     <script>
         document.getElementById("formOrcamento").addEventListener("submit", function (e) {
             e.preventDefault();
@@ -283,16 +405,22 @@ Necessidade: ${mensagem}`;
         });
     </script>
     <script>
-        const slides = document.querySelectorAll('.slide');
-        let current = 0;
+        const carousels = document.querySelectorAll(".carousel");
 
-        function changeSlide() {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }
+        carousels.forEach(carousel => {
 
-        setInterval(changeSlide, 10000);
+            const slides = carousel.querySelectorAll(".slide");
+            let current = 0;
+
+            function changeSlide() {
+                slides[current].classList.remove("active");
+                current = (current + 1) % slides.length;
+                slides[current].classList.add("active");
+            }
+
+            setInterval(changeSlide, 10000);
+
+        });
     </script>
 </body>
 
