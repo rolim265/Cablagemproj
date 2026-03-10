@@ -52,6 +52,12 @@
                     <i class="bi bi-whatsapp"></i>
                 </a>
             </div>
+            <!-- MENU BURGER -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
         </div>
     </header>
@@ -145,6 +151,17 @@
 
     </section>
 
+
+    <script>
+
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+    </script>
 </body>
 
 </html>
