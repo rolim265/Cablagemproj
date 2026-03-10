@@ -412,6 +412,7 @@ ORÇAMENTO
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+    margin-bottom: 25px;
 }
 
 .formulario h3 {
@@ -642,3 +643,4 @@ height:40px;
 
 
 }
+
